@@ -1,26 +1,55 @@
 // Returning the computers play randomly from the array
-function computerPlay(){
-    let str = ""
-    let result = ["Rock", "Paper", "Scissors"];
-    
-    for (let i = 0; i < result.length; i++){
-        str = result[Math.floor(Math.random() * result.length)];
-    }
-    return str;
-}
-// Plays a single round of Rock, Paper or Scissors
-// function singleRound(playerSelection, computerSelection){
-//     computerSelection = computerPlay();
-//     playerSelection = " ";
-    
 
-// }
+const values = ["Rock", "Paper", "Scissors"];
+
+function computerPlay(){
+
+    gameValues = values[Math.floor(Math.random() * values.length)];
+    
+    return gameValues;
+}
+
+//let playerSelection = playerChoice().toLowerCase();
+
+
+
+// Plays a single round of Rock, Paper or Scissors
+function playRound(playerSelection, computerSelection){
+    
+    computerSelection = computerPlay();
+    playerSelection = playerChoice();
+   
+    
+    if (computerSelection === playerSelection){
+        console.log("Draw");
+    }
+    else if((computerSelection === "Rock" && playerSelection === "Scissors") || 
+      (computerSelection === "Scissors" && playerSelection === "Paper") ||
+      (computerSelection === "Paper" && playerSelection === "Rock")){
+      console.log("Computer won this round");
+    }
+    else{
+        console.log("You won this round");
+    }
+    
+}
 // Lets the user input what to play with (Rock, Paper or Scissors)
-function playerSelection(answer){
-    answer = prompt("Please select either Rock, Paper or Scissors");
+function playerChoice(){
+    let answer = prompt("Please select either Rock, Paper or Scissors");
     return answer;
 }
 
-//console.log(singleRound(playerSelection(),computerPlay()));
-//console.log(playerSelection());
-//console.log(computerPlay());
+// function game(){
+
+//     let rounds = [5];
+
+//     for (let i = 1; i >= rounds.length; i++){
+//         console.log(rounds[i]);
+//     }
+//     playRound();
+// }
+
+
+//console.log(computerPlay())
+//console.log(game())
+console.log(playRound());
