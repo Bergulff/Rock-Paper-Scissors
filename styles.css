@@ -1,0 +1,18 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 90px;
+  display: flex;
+  background-color: lightblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10%;
+}
