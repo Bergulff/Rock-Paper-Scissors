@@ -54,8 +54,8 @@ function playerChoice(){
 // Lets u play the game
 function game(){
     let gameWinner = "none"
-    playerSelection = playerChoice();
-    computerSelection = computerPlay();
+     playerSelection = playerChoice();
+     computerSelection = computerPlay();
 
     for (let i = 1; i <= 5; i++){
         let currentWinner = playRound(playerChoice(), computerPlay());
@@ -79,19 +79,22 @@ function game(){
         gameWinner = "Draw";
     }
 
-    console.log(`Player: ${playerScore} | Computer: ${computerScore}`);
+    console.log(`Player: ${playerScore} | Computer: ${computerScore} \n\n`);
 
     if(playerScore === 5){
-        console.log(`Player won the game with: ${playerScore} to ${computerScore}`);
+        console.log(`Player won the game with: ${playerScore} to ${computerScore} \n\n`);
     }
     else if(computerScore === 5){
-        console.log(`Computer won the game with: ${computerScore} to ${playerScore}`);
+        console.log(`Computer won the game with: ${computerScore} to ${playerScore} \n\n`);
     }
 
-    if(gameWinner === "Draw"){
-        console.log("There is no winner, it's a draw \n\n");
+    if(gameWinner === playerSelection && gameWinner === computerSelection){
+        console.log(`There is no winner, it's a ${gameWinner} \n\n`);
     }
-    else{
+    else if (gameWinner === playerSelection){
+        console.log(`Winner of the match is: ${gameWinner} \n\n`);
+    }
+    else if(gameWinner === computerSelection){
         console.log(`Winner of the match is: ${gameWinner} \n\n`);
     }
 
