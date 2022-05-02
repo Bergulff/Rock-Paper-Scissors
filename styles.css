@@ -17,3 +17,16 @@ nav {
   justify-content: space-between;
   padding: 30px 10%;
 }
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 200px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+/* #Rock {
+  background-image: url(https://m.media-amazon.com/images/I/512+wrpsGaL._AC_SX679_.jpg);
+  background-repeat: no-repeat;
+  background-position: x-y;
+} */

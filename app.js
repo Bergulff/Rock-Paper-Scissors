@@ -9,7 +9,7 @@ function computerPlay(){
 
     gameValues = values[Math.floor(Math.random() * values.length)];
     
-    return gameValues;
+    return gameValues.toLowerCase();
 }
 
 
@@ -27,9 +27,9 @@ function playRound(playerSelection, computerSelection){
         playerScore++;
         //console.log(`Your score and is: ${playerScore}. The computer score is: ${computerScore}`);
     }
-    else if((computerSelection === "Rock" && playerSelection === "Scissors") || 
-      (computerSelection === "Scissors" && playerSelection === "Paper") ||
-      (computerSelection === "Paper" && playerSelection === "Rock")){
+    else if((computerSelection === "rock" && playerSelection === "scissors") || 
+      (computerSelection === "scissors" && playerSelection === "paper") ||
+      (computerSelection === "paper" && playerSelection === "rock")){
         console.log(`Computer choose: ${computerSelection}`);
         console.log(`U choose: ${playerSelection}`);
         console.log(`You lose this round! ${computerSelection} beats ${playerSelection}`);
@@ -49,7 +49,7 @@ function playRound(playerSelection, computerSelection){
 // Lets the user input what to play with (Rock, Paper or Scissors)
 function playerChoice(){
     let answer = prompt("Please select either Rock, Paper or Scissors");
-    return answer;
+    return answer.toLowerCase();
 }
 // Lets u play the game
 function game(){
