@@ -31,8 +31,8 @@ function playRound(playerSelection, computerSelection){
         //console.log(`Your score and is: ${playerScore}. The computer score is: ${computerScore}`);
     }
     else if((computerSelection === "rock" && playerSelection === "scissors") || 
-      (computerSelection === "scissors" && playerSelection === "paper") ||
-      (computerSelection === "paper" && playerSelection === "rock")){
+        (computerSelection === "scissors" && playerSelection === "paper") ||
+        (computerSelection === "paper" && playerSelection === "rock")){
         console.log(`Computer choose: ${computerSelection}`);
         console.log(`U choose: ${playerSelection}`);
         console.log(`You lose this round! ${computerSelection} beats ${playerSelection}`);
