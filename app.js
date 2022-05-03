@@ -4,6 +4,9 @@ const values = ["Rock", "Paper", "Scissors"];
 let playerScore = 0;
 let computerScore = 0;
 
+const rockBtn = document.querySelector("#Rock");
+const paperBtn = document.querySelector("#Paper");
+const scissorsBtn = document.querySelector("#Scissors");
 
 function computerPlay(){
 
@@ -49,6 +52,7 @@ function playRound(playerSelection, computerSelection){
 // Lets the user input what to play with (Rock, Paper or Scissors)
 function playerChoice(){
     let answer = prompt("Please select either Rock, Paper or Scissors");
+
     return answer.toLowerCase();
 }
 // Lets u play the game
@@ -57,7 +61,7 @@ function game(){
      playerSelection = playerChoice();
      computerSelection = computerPlay();
 
-    for (let i = 1; i <= 5; i++){
+    for (let i = 1; i < 6; i++){
         let currentWinner = playRound(playerChoice(), computerPlay());
         //console.log(playerChoice());
 
