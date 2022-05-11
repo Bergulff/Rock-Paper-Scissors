@@ -69,7 +69,7 @@ function playRound(playerSelection, computerSelection){
 //}
 
 function isGameOver(){
-    return playerScore === 5 || computerScore === 5;
+    return playerScore === 5 || computerScore === 6;
 }
 
 // Lets u play the game
