@@ -4,9 +4,20 @@ const values = ["Rock", "Paper", "Scissors"];
 let playerScore = 0;
 let computerScore = 0;
 
+
+
 const rockBtn = document.querySelector("#Rock");
 const paperBtn = document.querySelector("#Paper");
 const scissorsBtn = document.querySelector("#Scissors");
+// const playBtn = document.querySelector("#playGame")
+
+// rockBtn.addEventListener("click", () => {
+//     playerSelection = playerChoice();
+//     computerSelection = computerPlay();
+//     playRound(playerSelection, computerSelection);
+//     console.log(`${playerSelection}`);
+    
+// });
 
 function computerPlay(){
 
@@ -50,60 +61,66 @@ function playRound(playerSelection, computerSelection){
     
 }
 // Lets the user input what to play with (Rock, Paper or Scissors)
-function playerChoice(){
-    let answer = prompt("Please select either Rock, Paper or Scissors");
+//function playerChoice(){
+  
+    //let answer = prompt("Please select either Rock, Paper or Scissors");
 
-    return answer.toLowerCase();
+  // return answer.toLowerCase();
+//}
+
+function isGameOver(){
+    return playerScore === 5 || computerScore === 5;
 }
+
 // Lets u play the game
-function game(){
-    let gameWinner = "none"
-     playerSelection = playerChoice();
-     computerSelection = computerPlay();
+// function game(){
+//     let gameWinner = "none"
+//      playerSelection = playerChoice();
+//      computerSelection = computerPlay();
 
-    for (let i = 1; i < 6; i++){
-        let currentWinner = playRound(playerChoice(), computerPlay());
-        //console.log(playerChoice());
+//     for (let i = 1; i < 6; i++){
+//         let currentWinner = playRound(playerChoice(), computerPlay());
+//         //console.log(playerChoice());
 
-        if(currentWinner === playerSelection){
-            playerScore++;
-        }
-        else if(currentWinner === computerSelection){
-            computerScore++;
-        }
+//         if(currentWinner === playerSelection){
+//             playerScore++;
+//         }
+//         else if(currentWinner === computerSelection){
+//             computerScore++;
+//         }
     
 
-    if(playerScore > computerScore){
-        gameWinner = "Player";
-    }
-    else if(computerScore > playerScore){
-        gameWinner = "Computer";
-    }
-    else {
-        gameWinner = "Draw";
-    }
+//     if(playerScore > computerScore){
+//         gameWinner = "Player";
+//     }
+//     else if(computerScore > playerScore){
+//         gameWinner = "Computer";
+//     }
+//     else {
+//         gameWinner = "Draw";
+//     }
 
-    console.log(`Player: ${playerScore} | Computer: ${computerScore} \n\n`);
+//     console.log(`Player: ${playerScore} | Computer: ${computerScore} \n\n`);
 
-    if(playerScore === 5){
-        console.log(`Player won the game with: ${playerScore} to ${computerScore} \n\n`);
-    }
-    else if(computerScore === 5){
-        console.log(`Computer won the game with: ${computerScore} to ${playerScore} \n\n`);
-    }
+//     if(playerScore === 5){
+//         console.log(`Player won the game with: ${playerScore} to ${computerScore} \n\n`);
+//     }
+//     else if(computerScore === 5){
+//         console.log(`Computer won the game with: ${computerScore} to ${playerScore} \n\n`);
+//     }
 
-    if(gameWinner === playerSelection && gameWinner === computerSelection){
-        console.log(`There is no winner, it's a ${gameWinner} \n\n`);
-    }
-    else if (gameWinner === playerSelection){
-        console.log(`Winner of the match is: ${gameWinner} \n\n`);
-    }
-    else if(gameWinner === computerSelection){
-        console.log(`Winner of the match is: ${gameWinner} \n\n`);
-    }
+//     if(gameWinner === playerSelection && gameWinner === computerSelection){
+//         console.log(`There is no winner, it's a ${gameWinner} \n\n`);
+//     }
+//     else if (gameWinner === playerSelection){
+//         console.log(`Winner of the match is: ${gameWinner} \n\n`);
+//     }
+//     else if(gameWinner === computerSelection){
+//         console.log(`Winner of the match is: ${gameWinner} \n\n`);
+//     }
 
- }
- return gameWinner;
-}
+//  }
+//  return gameWinner;
+// }
 
-console.log(game());
+// console.log(game());
